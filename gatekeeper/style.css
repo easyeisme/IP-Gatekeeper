@@ -1,0 +1,191 @@
+
+/*
+===== GENERAL STYLES
+====================================================================== */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background: #EEEEEE;
+	color: #333333;
+	font: normal 14px/1.25 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 30px;
+}
+a {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+
+/*
+===== HORIZONTAL RULES
+====================================================================== */
+hr {
+	background: #DDDDDD;
+	border: 0;
+	height: 1px;
+	margin: 20px -5px;
+}
+
+
+/*
+===== HEADINGS & TEXT
+====================================================================== */
+h1 {
+	border-bottom: solid #DDDDDD 1px;
+	margin: 0 -5px;
+	padding-left: 5px;
+}
+p {
+	margin: 20px 0 0 0;
+}
+
+
+/*
+===== LISTS
+====================================================================== */
+ul {
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+===== FORMS
+====================================================================== */
+form {
+	margin: 0;
+}
+.input-text {
+	border: solid #CCCCCC 1px;
+	padding: 5px 10px;
+	outline: none;
+}
+
+
+/*
+===== BUTTONS
+====================================================================== */
+.btn {
+	border-radius: 2px;
+	cursor: pointer;
+	font: normal 12px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	outline: none;
+}
+.btn-blue {
+	background: #0072FF;
+	background: -webkit-linear-gradient(180deg, #00A2FF 10%, #0072FF 90%);
+	background: linear-gradient(180deg, #00A2FF 10%, #0072FF 90%);
+	border: solid #0072FF 1px;
+	color: #FFFFFF;
+}
+.btn-blue:hover {
+	background: #0082FF;
+	background: -webkit-linear-gradient(180deg, #00B2FF 10%, #0082FF 90%);
+	background: linear-gradient(180deg, #00B2FF 10%, #0082FF 90%);
+}
+.btn-gray {
+	background: #CCCCCC;
+	background: -webkit-linear-gradient(180deg, #D9D9D9 10%, #CCCCCC 90%);
+	background: linear-gradient(180deg, #D9D9D9 10%, #CCCCCC 90%);
+	border: solid #CCCCCC 1px;
+	color: #666666;
+}
+.btn-gray:hover {
+	background: #DDDDDD;
+	background: -webkit-linear-gradient(180deg, #E9E9E9 10%, #DDDDDD 90%);
+	background: linear-gradient(180deg, #E9E9E9 10%, #DDDDDD 90%);
+}
+
+
+/*
+===== CLEARFIX
+====================================================================== */
+
+.clear {
+	clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+
+/*
+===== MAIN WRAPPER
+====================================================================== */
+.wrapper {
+	background: #FFFFFF;
+	border: solid #DDDDDD 1px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.075);
+	margin: 0 auto;
+	min-height: 300px;
+	padding: 30px;
+	width: 520px;
+}
+
+
+/*
+===== PAGE:  ADMIN
+====================================================================== */
+.pg-admin { }
+.pg-admin .title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.pg-admin .form-add-ip {
+	margin-top: 20px;
+}
+.pg-admin .form-add-ip .input-text {
+	float: left;
+	font-size: 22px;
+	height: 40px;
+	line-height: 1;
+	margin-right: 5px;
+	width: 300px;
+}
+.pg-admin .form-add-ip .btn {
+	float: left;
+	font-size: 18px;
+	height: 40px;
+	width: 80px;
+}
+.pg-admin .ip-list {
+	margin-top: 5px;
+}
+.pg-admin .ip-list li {
+	padding: 10px 12px;
+}
+.pg-admin .ip-list li:nth-child(2n+1) {
+	background: #F6F6F6;
+}
+.pg-admin .ip-list .ip-address {
+	font: normal 16px/24px Verdana, Arial, sans-serif;
+}
+.pg-admin .ip-list .btn {
+	float: right;
+	height: 24px;
+	padding: 0 10px;
+}
+.pg-admin .empty-list {
+	color: #AAAAAA;
+	font-style: italic;
+}
+

@@ -1,17 +1,16 @@
 <?php
-require_once('gatekeeper/gatekeeper.php');
+require_once('../gatekeeper.php');
 $gatekeeper = new Gatekeeper();
-$gatekeeper->guard();
-// $gatekeeper->guard();
 ?>
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<link rel="stylesheet" type="text/css" href="../style.css" />
 </head>
 <body>
 
-<h1>Welcome to My Website</h1>
+<div class="wrapper">
+	<h1>Authorizing...</h1>
+</div><!-- .wrapper -->
 
 </body>
 </html>

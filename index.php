@@ -1,19 +1,18 @@
 <?php
 require_once('gatekeeper/gatekeeper.php');
 $gatekeeper = new Gatekeeper();
-$gatekeeper->authorizeUser();
-$gatekeeper->addIP('0.0.0.0');
-$gatekeeper->removeIP('123.123.123.123');
-// $gatekeeper->guard();
+$gatekeeper->guard();
 ?>
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<link rel="stylesheet" type="text/css" href="gatekeeper/style.css" />
 </head>
 <body>
 
-<h1>Welcome to My Website</h1>
+<div class="wrapper">
+	<h1>Welcome</h1>
+	<p>This view represents your website or web project.</p>
+</div><!-- .wrapper -->
 
 </body>
 </html>

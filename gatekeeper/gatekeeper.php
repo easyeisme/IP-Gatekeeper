@@ -4,7 +4,7 @@ class Gatekeeper {
 	private $ip = '';
 	private $password = '';
 	private $password_required = false;
-	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/redirect-target.html';
+	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/unauthorized.html';
 	private $authorized_ip_file = '/authorized-ip.txt'; // relative to class; to be finalized in constructor
 	private $fh;
 
@@ -24,6 +24,26 @@ class Gatekeeper {
 		if(!$this->isAuthorizedIP($this->ip)) {
 			$this->redirectUser();
 		}
+	}
+
+	/**
+	 * Determines if a user's IP address has been authorized by checking it
+	 * against a list of valid IP addresses.
+	 *
+	 * @param string $ip - the user's IP address
+	 * @return boolean
+	*/
+	public function isAuthorizedIP($ip) {
+		$is_valid_user = false;
+		$this->fh = fopen($this->authorized_ip_file, 'r');
+		while($row = fgets($this->fh)) {
+			if(trim($row) === $ip) {
+				$is_valid_user = true;
+				break;
+			}
+		}
+		fclose($this->fh);
+		return $is_valid_user;
 	}
 
 	/**
@@ -68,23 +88,13 @@ class Gatekeeper {
 	}
 
 	/**
-	 * Determines if a user's IP address has been authorized by checking it
-	 * against a list of valid IP addresses.
+	 * Retrieves all authorized IP addresses.
 	 *
-	 * @param string $ip - the user's IP address
-	 * @return boolean
+	 * @return array - an array of authorized IP addresses
 	*/
-	private function isAuthorizedIP($ip) {
-		$is_valid_user = false;
-		$this->fh = fopen($this->authorized_ip_file, 'r');
-		while($row = fgets($this->fh)) {
-			if(trim($row) === $ip) {
-				$is_valid_user = true;
-				break;
-			}
-		}
-		fclose($this->fh);
-		return $is_valid_user;
+	public function getAuthorizedIPs() {
+		$ip_list = file($this->authorized_ip_file);
+		return $ip_list;
 	}
 
 	/**
@@ -96,41 +106,12 @@ class Gatekeeper {
 		return filter_var($ip, FILTER_VALIDATE_IP);
 	}
 
-
-
-	// Redirect the user
+	/**
+	 * Redirects the user to the defined location.
+	*/
 	private function redirectUser() {
 		header('Location: '.$this->redirect_url);
 		exit;
 	}
-
-
-
-
-
-	/*
-	private $db;
-	private $userID = 0;
-	private $userIDBufferLength = 3; // user for encrypting user IDs in confirmation codes
-	private $tzOffset = 0;
-
-	/**
-	 * Class constructor.
-	 *
-	 * @param PDO $db_conn - The database connection handler
-	 * @param int $uid - The user ID in the database
-	* /
-	public function __construct($db_conn, $uid = '') {
-		$this->db = $db_conn;
-		if(!empty($uid)) {
-			$this->userID = $uid;
-		} else {
-			if(!empty($_SESSION['user-id'])) {
-				$this->userID = $_SESSION['user-id'];
-				$this->tzOffset = $_SESSION['tz-offset'];
-			}
-		}
-	}
-	*/
 }
 ?>
