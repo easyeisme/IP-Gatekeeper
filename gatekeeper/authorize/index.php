@@ -32,7 +32,7 @@ if(!$gatekeeper->isAuthorizedIP()) {
 	<h1>Authorization</h1>
 	<?php if($password_required) { ?>
 		<form class="form form-password clearfix" action="" method="post">
-			<div class="title">Authorize New IP Address:</div>
+			<div class="title">Password:</div>
 			<input type="password" class="input-text" name="password" value="" />
 			<button class="btn btn-blue" name="submit">Submit</button>
 		</form>
