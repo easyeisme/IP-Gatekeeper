@@ -1,7 +1,7 @@
 <?php
 class Gatekeeper {
 
-	private $ip = '';
+	private $ip;
 	private $password = '';
 	private $password_required = false;
 	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/unauthorized.html';
@@ -44,6 +44,24 @@ class Gatekeeper {
 		}
 		fclose($this->fh);
 		return $is_valid_user;
+	}
+
+	/**
+	 * Determines if password is required before a user can be authorized.
+	 *
+	 * @return boolean
+	*/
+	public function isPasswordRequired() {
+		return $this->password_required;
+	}
+
+	/**
+	 * Sets/overwrites the authorization password.
+	 *
+	 * @param string $ip - the user's IP address
+	*/
+	public function setPassword($p) {
+		$this->password = $p;
 	}
 
 	/**

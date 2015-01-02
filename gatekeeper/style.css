@@ -11,11 +11,12 @@ html {
 body {
 	background: #EEEEEE;
 	color: #333333;
-	font: normal 14px/1.25 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 30px;
 }
 a {
+	color: #0072FF;
 	text-decoration: underline;
 }
 a:hover {
