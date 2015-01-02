@@ -31,7 +31,7 @@ hr {
 	background: #DDDDDD;
 	border: 0;
 	height: 1px;
-	margin: 20px -5px;
+	margin: 30px -5px;
 }
 
 
@@ -70,6 +70,7 @@ form {
 }
 .input-text {
 	border: solid #CCCCCC 1px;
+	border-radius: 2px;
 	padding: 5px 10px;
 	outline: none;
 }
@@ -139,6 +140,39 @@ form {
 	min-height: 300px;
 	padding: 30px;
 	width: 520px;
+}
+
+
+/*
+===== PAGE:  AUTHORIZE
+====================================================================== */
+.pg-authorize { }
+.pg-authorize .title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.pg-authorize .form-password {
+	margin-top: 20px;
+}
+.pg-authorize .form-password .input-text {
+	float: left;
+	font-size: 22px;
+	height: 40px;
+	line-height: 1;
+	margin-right: 5px;
+	width: 300px;
+}
+.pg-authorize .form-password .btn {
+	float: left;
+	font-size: 18px;
+	height: 40px;
+	width: 80px;
+}
+.pg-authorize .error {
+	color: #CC0000;
+	font-style: italic;
+	margin-top: 5px;
 }
 
 

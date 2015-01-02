@@ -2,8 +2,8 @@
 class Gatekeeper {
 
 	private $ip;
-	private $password = '';
-	private $password_required = false;
+	private $password = 'booger';
+	private $password_required = true;
 	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/unauthorized.html';
 	private $authorized_ip_file = '/authorized-ip.txt'; // relative to class; to be finalized in constructor
 	private $fh;
@@ -33,7 +33,8 @@ class Gatekeeper {
 	 * @param string $ip - the user's IP address
 	 * @return boolean
 	*/
-	public function isAuthorizedIP($ip) {
+	public function isAuthorizedIP($ip = '') {
+		if(empty($ip)) { $ip = $this->ip; }
 		$is_valid_user = false;
 		$this->fh = fopen($this->authorized_ip_file, 'r');
 		while($row = fgets($this->fh)) {
@@ -56,9 +57,19 @@ class Gatekeeper {
 	}
 
 	/**
+	 * Determines if the given password is valid.
+	 *
+	 * @param string $p - the given password
+	 * @return boolean
+	*/
+	public function isValidPassword($p) {
+		return ($this->password === $p);
+	}
+
+	/**
 	 * Sets/overwrites the authorization password.
 	 *
-	 * @param string $ip - the user's IP address
+	 * @param string $p - the new password
 	*/
 	public function setPassword($p) {
 		$this->password = $p;
