@@ -4,7 +4,7 @@ class Gatekeeper {
 	private $ip;
 	private $password = 'booger';
 	private $password_required = true;
-	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/unauthorized.html';
+	private $redirect_url = 'http://localhost/_projects/ip-gatekeeper/gatekeeper/';
 	private $authorized_ip_file = '/authorized-ip.txt'; // relative to class; to be finalized in constructor
 	private $fh;
 
