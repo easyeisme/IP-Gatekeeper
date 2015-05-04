@@ -8,12 +8,18 @@ Content coming soon...
 [Describe the process of what goes on behind the scenes]
 
 
-### How to Use
+## How to Use
 Content coming soon...
 
 
 ## Routes
+```
+// Comment goes here
+/gatekeeper/authorize/
 
+// Comment goes there
+/gatekeeper/admin
+```
 
 
 ## Notes to Self
