@@ -74,29 +74,6 @@ form {
 	padding: 5px 10px;
 	outline: none;
 }
-.form-password {
-	margin-top: 20px;
-}
-.form-password .input-text {
-	float: left;
-	font-size: 22px;
-	height: 40px;
-	line-height: 1;
-	margin-right: 5px;
-	width: 300px;
-}
-.form-password .btn {
-	float: left;
-	font-size: 18px;
-	height: 40px;
-	padding: 0;
-	width: 80px;
-}
-.error {
-	color: #CC0000;
-	font-style: italic;
-	margin-top: 5px;
-}
 
 
 /*
@@ -105,11 +82,8 @@ form {
 .btn {
 	border-radius: 2px;
 	cursor: pointer;
-	display: inline-block;
 	font: normal 12px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	outline: none;
-	padding: 10px 15px;
-	text-decoration: none;
 }
 .btn-blue {
 	background: #0072FF;
@@ -166,82 +140,5 @@ form {
 	min-height: 300px;
 	padding: 30px;
 	width: 520px;
-}
-
-
-/*
-===== PAGE:  GATEKEEPER
-====================================================================== */
-.pg-gatekeeper { }
-.pg-gatekeeper .btn-return {
-	font-size: 16px;
-}
-
-
-/*
-===== PAGE:  AUTHORIZE
-====================================================================== */
-.pg-authorize { }
-.pg-authorize .title {
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 3px;
-}
-.pg-authorize .btn-return {
-	font-size: 16px;
-}
-
-
-/*
-===== PAGE:  ADMIN
-====================================================================== */
-.pg-admin { }
-.pg-admin .title {
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 3px;
-}
-.pg-admin .form-add-ip {
-	margin-top: 20px;
-}
-.pg-admin .form-add-ip .input-text {
-	float: left;
-	font-size: 22px;
-	height: 40px;
-	line-height: 1;
-	margin-right: 5px;
-	width: 300px;
-}
-.pg-admin .form-add-ip .btn {
-	float: left;
-	font-size: 18px;
-	height: 40px;
-	width: 80px;
-}
-.pg-admin .ip-list {
-	margin-top: 5px;
-}
-.pg-admin .ip-list li {
-	padding: 10px 12px;
-}
-.pg-admin .ip-list li:nth-child(2n+1) {
-	background: #F6F6F6;
-}
-.pg-admin .ip-list .ip-address {
-	font: normal 16px/24px Verdana, Arial, sans-serif;
-}
-.pg-admin .ip-list .btn {
-	color: #FFFFFF;
-	float: right;
-	height: 24px;
-	padding: 0 10px;
-}
-.pg-admin .ip-list .btn:hover {
-	color: #B3B3B3;
-}
-.pg-admin .empty-list {
-	color: #AAAAAA;
-	font-style: italic;
-	margin: 15px 0;
 }
 

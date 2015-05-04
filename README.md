@@ -14,9 +14,6 @@ Content coming soon...
 Content coming soon...
 
 
-## Future Development
-* Convert the tool into a single-page app
-  * Use routes to create "pages" for `/authorize` and `/admin`
-    * Link to these areas
-  * This will allow end-user to control all aspects of the app (i.e. password, redirect URLs, etc.) from one place
-  * Access to the `/admin` page should require a password
+## Notes to Self
+- Development is complete
+- Begin work on documentation

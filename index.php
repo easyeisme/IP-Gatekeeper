@@ -1,11 +1,11 @@
 <?php
 require_once('gatekeeper/gatekeeper.php');
 $gatekeeper = new Gatekeeper();
-$gatekeeper->guard();
+$gatekeeper->guard('gatekeeper/');
 ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="gatekeeper/style.css" />
+<link rel="stylesheet" type="text/css" href="library/css/style.css" />
 </head>
 <body>
 
