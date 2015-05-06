@@ -12,7 +12,7 @@ Adding the IP Gatekeeper to any project is easy.  Simply follow these instructio
 For example:
 ```php
 <?php
-require_once('gatekeeper/gatekeeper.php');
+require_once('path/to/gatekeeper/gatekeeper.php');
 $gatekeeper = new Gatekeeper();
 $gatekeeper->guard('gatekeeper/');
 ?>
