@@ -4,8 +4,28 @@ This is a poor man's way to keep unwanted eyes off of a project.  It was develop
 
 
 ## Getting Started
-1: Include the gatekeeper file in your project
-2: Create a new gatekeeper object
+1. Include the gatekeeper file in your project
+```
+<?php
+require_once('gatekeeper/gatekeeper.php');
+$gatekeeper = new Gatekeeper();
+$gatekeeper->guard('gatekeeper/');
+?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="library/css/style.css" />
+</head>
+<body>
+
+<div class="wrapper">
+	<h1>Welcome</h1>
+	<p>This view represents your website or web project.</p>
+</div><!-- .wrapper -->
+
+</body>
+</html>
+```
+2. Create a new gatekeeper object
 
 
 ## Authorize a User
