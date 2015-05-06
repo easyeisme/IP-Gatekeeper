@@ -42,7 +42,17 @@ Note: a password is required to access the admin area.
 
 
 ## Configuration
+> STILL WORKING HERE
 > show and describe all configuration options
+```php
+$config = array(
+	'project_url' => 'http://localhost/_projects/ip-gatekeeper/',
+	'gatekeeper_url' => 'http://localhost/_projects/ip-gatekeeper/gatekeeper/',
+	'auth_password_required' => true,
+	'auth_password' => 'password',
+	'admin_password' => 'password'
+);
+```
 
 
 ## Notes to Self
