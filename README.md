@@ -22,7 +22,7 @@ $gatekeeper->guard('gatekeeper/');
 </body>
 </html>
 ```
-Once setup, all unauthorized visitors will be redirected to a landing page (whose URL/path is defined by the parameter passed to the $gatekeeper->guard() function).
+Once setup, all unauthorized visitors will be redirected to a landing page; the URL/path of which is defined by the parameter passed to the `$gatekeeper->guard()` method.
 
 
 ## Authorize a User
