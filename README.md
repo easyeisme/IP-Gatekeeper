@@ -8,6 +8,7 @@ Adding the IP Gatekeeper to any project is easy.  Simply follow these instructio
 - Include the necessary file
 - Create a new Gatekeeper object
 - Put the Gatekeeper on guard
+
 For example:
 ```php
 <?php
