@@ -25,16 +25,20 @@ $gatekeeper->guard('gatekeeper/');
 Once setup, all unauthorized visitors will be redirected to a landing page; the URL/path of which is defined by the parameter passed to the `$gatekeeper->guard()` method.
 
 
-## Authorize a User
+## Authorizing a User
+To grant a user access to your project, simply ask them to visit the following URL:
 ```
-URL:  http://www.yourdomain.com/path/to/gatekeeper/authorize/
+http://www.yourdomain.com/path/to/gatekeeper/authorize/
 ```
-Password or No Password ...
+Note: the authorization process can also be configured to require that the user provide a password before being granted access.
 
 
-## Administrators
-Route ...
-Options available ...
+## Managing Users
+Site administrators can add/remove authorized users via the following URL:
+```
+http://www.yourdomain.com/path/to/gatekeeper/authorize/
+```
+Note: a password is required to access the admin area.
 
 
 ## Setup & Configuration
@@ -47,19 +51,3 @@ Options available ...
 
 ## Notes to Self
 - Move sample index file to a "demo" folder
-
-
-
-
-
-
-## Routes
-```
-// Comment goes here
-/gatekeeper/authorize/
-
-// Comment goes there
-/gatekeeper/admin
-```
-
-
