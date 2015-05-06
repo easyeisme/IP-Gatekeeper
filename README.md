@@ -4,7 +4,9 @@ This is a poor man's way to keep unwanted eyes off of a project.  It was develop
 
 
 ## Authorize a User
-`URL:  http://www.yourdomain.com/path/to/gatekeeper/authorize/
+```
+URL:  http://www.yourdomain.com/path/to/gatekeeper/authorize/
+```
 Password or No Password ...
 
 
