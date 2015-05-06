@@ -4,7 +4,11 @@ This is a poor man's way to keep unwanted eyes off of a project.  It was develop
 
 
 ## Getting Started
-Adding the IP Gatekeeper to any project is easy.  Simply include the necessary file, create a new Gatekeeper object, and put the Gatekeeper on guard.  Example:
+Adding the IP Gatekeeper to any project is easy.  Simply follow these instructions:
+- Include the necessary file
+- Create a new Gatekeeper object
+- Put the Gatekeeper on guard
+For example:
 ```php
 <?php
 require_once('gatekeeper/gatekeeper.php');
