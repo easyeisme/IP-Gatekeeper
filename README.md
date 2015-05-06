@@ -36,18 +36,16 @@ Note: the authorization process can also be configured to require that the user 
 ## Managing Users
 Site administrators can add/remove authorized users via the following URL:
 ```
-http://www.yourdomain.com/path/to/gatekeeper/authorize/
+http://www.yourdomain.com/path/to/gatekeeper/admin/
 ```
 Note: a password is required to access the admin area.
 
 
-## Setup & Configuration
-- Include File
-- Create a new object
-- Put on guard
-
+## Configuration
 > show and describe all configuration options
 
 
 ## Notes to Self
 - Move sample index file to a "demo" folder
+- Create a gatekeeper/config.php file to store the configuration array
+- Include additional variables to the config array that allow the user to change the content for the various elements of each gatekeeper view (i.e. authorize, admin, and the various parts of each).
