@@ -35,11 +35,11 @@ http://www.yourdomain.com/path/to/gatekeeper/authorize/
 
 
 ## Managing Users
-Site administrators can add/remove authorized users via the following URL:
+Site administrators can add/remove authorized users via the URL below.
+_NOTE:  A password is required to access the admin area.  See configuration details below for more information._
 ```
 http://www.yourdomain.com/path/to/gatekeeper/admin/
 ```
-Note: a password is required to access the admin area.
 
 
 ## Configuration
