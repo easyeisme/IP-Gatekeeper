@@ -27,7 +27,8 @@ Once setup, all unauthorized visitors will be redirected to a landing page; the 
 
 
 ## Authorizing a User
-To grant a user access to your project, simply ask them to visit the URL below.  _Note: the authorization process can also be configured to require that the user provide a password before being granted access_.
+To grant a user access to your project, simply ask them to visit the URL below.
+_NOTE:  The authorization process can also be configured to require a password before being granted access._
 ```
 http://www.yourdomain.com/path/to/gatekeeper/authorize/
 ```
