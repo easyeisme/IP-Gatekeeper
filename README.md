@@ -5,9 +5,9 @@ This is a poor man's way to keep unwanted eyes off of a project.  It was develop
 
 ## Getting Started
 Adding the IP Gatekeeper to any project is easy.  Simply follow these instructions:
-1 Include the necessary file
-2 Create a new Gatekeeper object
-3 Put the Gatekeeper on guard
+1. Include the necessary file
+2. Create a new Gatekeeper object
+3. Put the Gatekeeper on guard
 
 For example:
 ```php
