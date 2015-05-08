@@ -27,16 +27,14 @@ Once setup, all unauthorized visitors will be redirected to a landing page; the 
 
 
 ## Authorizing a User
-To grant a user access to your project, simply ask them to visit the URL below.
-The authorization process can also be configured to require a password before being granted access.
+To grant a user access to your project, simply ask them to visit the URL below.  The authorization process can also be configured to require a password before granting access to the user.
 ```
 http://www.yourdomain.com/path/to/gatekeeper/authorize/
 ```
 
 
 ## Managing Users
-Site administrators can add/remove authorized users via the URL below.
-A password is required to access the admin area.  See configuration details below for more information.
+Site administrators can add/remove authorized users via the URL below.  A password is required to access the admin area.  See configuration details below for more information.
 ```
 http://www.yourdomain.com/path/to/gatekeeper/admin/
 ```
