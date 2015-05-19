@@ -5,14 +5,8 @@ require_once('gatekeeper.php');
 // Configuration / Setup
 $router = new Router();
 $gatekeeper = new Gatekeeper();
-$config = array(
-	'project_url' => 'http://localhost/_projects/ip-gatekeeper/',
-	'gatekeeper_url' => 'http://localhost/_projects/ip-gatekeeper/gatekeeper/',
-	'auth_password_required' => true,
-	'auth_password' => 'mario1',
-	'admin_password' => 'booger',
-	'route' => trim($router->getRoute(), '/')
-);
+require_once('gatekeeper-config.php'); // $config
+$config['route'] = trim($router->getRoute(), '/');
 $gatekeeper->setParams($config);
 
 // Retrieve user input
