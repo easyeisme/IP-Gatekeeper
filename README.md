@@ -11,7 +11,7 @@ Adding the IP Gatekeeper to any project is easy.  Simply follow these instructio
 2. Create a new Gatekeeper object
 3. Put the Gatekeeper on guard
 
-For example:
+Example:
 ```php
 <?php
 require_once('path/to/gatekeeper/gatekeeper.php');
@@ -60,8 +60,3 @@ $config = array(
 	'admin_password' => 'admin-password-goes-here'
 );
 ```
-
-
-## Future Development
-- Move the sample index file to a "demo" folder
-- Include additional variables to the gatekeeper configuration array that allow the user to change the content for the various elements of each gatekeeper view (i.e. authorize, admin, and the various parts of each).
