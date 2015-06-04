@@ -14,7 +14,7 @@ class Gatekeeper {
 	 * Class constructor.
 	*/
 	public function __construct() {
-		if(session_status() == PHP_SESSION_NONE) {
+		if(empty(session_id())) {
 			session_start();
 		}
 		$this->ip = $_SERVER['REMOTE_ADDR'];
