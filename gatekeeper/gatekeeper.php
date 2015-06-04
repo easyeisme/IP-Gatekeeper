@@ -14,11 +14,38 @@ class Gatekeeper {
 	 * Class constructor.
 	*/
 	public function __construct() {
-		if(empty(session_id())) {
+		if(session_id() === '') {
 			session_start();
 		}
-		$this->ip = $_SERVER['REMOTE_ADDR'];
+		$this->ip = $this->getUserIPAddress();
 		$this->authorized_ip_file = __DIR__.$this->authorized_ip_file;
+	}
+
+	/**
+	 * Gets the user's IP address.
+	 *
+	 * @return string
+	*/
+	public function getUserIPAddress() {
+		$ip_source = array(
+			'HTTP_CLIENT_IP',
+			'HTTP_X_FORWARDED_FOR',
+			'HTTP_X_FORWARDED',
+			'HTTP_X_CLUSTER_CLIENT_IP',
+			'HTTP_FORWARDED_FOR',
+			'HTTP_FORWARDED',
+			'REMOTE_ADDR'
+		);
+		foreach($ip_source as $src) {
+			if(array_key_exists($src, $_SERVER) === true) {
+				foreach(explode(',', $_SERVER[$src]) as $ip) {
+					$ip = trim($ip);
+					if(filter_var($ip, FILTER_VALIDATE_IP)) {
+						return $ip;
+					}
+				}
+			}
+		}
 	}
 
 	/**
