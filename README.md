@@ -60,3 +60,8 @@ $config = array(
 	'admin_password' => 'admin-password-goes-here'
 );
 ```
+
+
+# Notes to Self
+- Consider different sources for IP addresses [http://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php].  For example, some servers don't store the user's IP address in the "REMOTE_ADDR" variable.
+- Add a troubleshooting section to my readme.  Include something about making sure that the authorized IP text file is writeable.  Perhaps include a notification in the landing page, or a system of checks and balances before authorizing a user.
